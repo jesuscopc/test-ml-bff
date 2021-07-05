@@ -4,13 +4,13 @@ import { searchProducts } from '../services/search.service';
 const { Router } = require('express');
 const router = new Router();
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response): void => {
   const queryParam: any = req.query.q;
+  console.log(queryParam);
   searchProducts(queryParam).then( result => {
-    res.status(200).json(result.results);
-  }).catch( err => {
-    console.log(err);
-    res.status(500).json('THre is an error with services');
+    res.status(200).json(result);
+  }).catch( () => {
+    res.status(500).json('There is an error with services');
   });
 });
 
