@@ -1,0 +1,20 @@
+{
+  "name": "test-ml-bff",
+  "version": "1.0.0",
+  "description": "This is a server for the app-ui test ml",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "test": "jest --coverage --watchAll=false"
+  },
+  "keywords": [
+    "Test ml",
+    "ML"
+  ],
+  "author": "Jesus Manriquez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
