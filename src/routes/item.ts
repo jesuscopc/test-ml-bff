@@ -5,7 +5,7 @@ const { Router } = require('express');
 const router = new Router();
 
 type productResponse = {
-    thumbnail: string,
+    image: string,
     title: string,
     condition: string,
     price: string,
@@ -15,7 +15,7 @@ type productResponse = {
 
 const prettyData = (fullProductsInfo: any, description: string = ''): productResponse => {
   return {
-    thumbnail: fullProductsInfo.thumbnail,
+    image: fullProductsInfo.pictures[0].url,
     title: fullProductsInfo.title,
     condition: fullProductsInfo.condition,
     price: fullProductsInfo.price,
