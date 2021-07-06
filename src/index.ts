@@ -13,7 +13,7 @@ app.use(express.json());
 // routes
 app.use(require('./routes'));
 app.use('/api/search', require('./routes/search'));
-// app.use('/api/topsecret_split', require('./routes/topsecret_split'));
+app.use('/api/item', require('./routes/item'));
 // starting the server
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
