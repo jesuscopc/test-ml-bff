@@ -29,7 +29,7 @@ router.get('/:productId', async (req: Request, res: Response): Promise<any> => {
   try {
     const resultDetail = await ProductService.getProductDetail(productId);
     const resultDesc = await ProductService.getProductDescription(productId);
-    const dataMinifed = prettyData(resultDetail, resultDesc?.plain_text);
+    const dataMinifed = prettyData(resultDetail, resultDesc.plain_text);
     res.status(200).json(dataMinifed);
   } catch (error) {
     res.status(500).json('There is an error with services');

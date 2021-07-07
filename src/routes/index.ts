@@ -3,7 +3,7 @@ const { Router } = require('express');
 
 const router = new Router();
 
-router.get('/health', (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response) => {
     const data = {
         name: 'Health Page',
     };

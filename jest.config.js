@@ -1,17 +1,15 @@
 module.exports = {
-    "preset": "ts-jest",
-    "collectCoverage": true,
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "transform": {
+    preset: "ts-jest",
+    collectCoverage: true,
+    roots: [ "<rootDir>/src" ],
+    transform: {
       "^.+\\.(ts)$": "ts-jest",
       "^.+\\.(js)$": "babel-jest"
     },
-    "transformIgnorePatterns": [
+    transformIgnorePatterns: [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
     ],
-    "moduleFileExtensions": [
+    moduleFileExtensions: [
       "ts",
       "tsx",
       "js",
@@ -19,10 +17,11 @@ module.exports = {
       "json",
       "node"
     ],
-    "collectCoverageFrom": [
+    collectCoverageFrom: [
       "src/**/*.{ts,ts}",
     ],
-    "coveragePathIgnorePatterns": [
+    coveragePathIgnorePatterns: [
       "src/index.ts",
-    ]
+    ],
+    moduleDirectories: ['node_modules', '<rootDir>/src']
   }

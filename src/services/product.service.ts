@@ -1,7 +1,7 @@
 import { API_CONFIG } from "../constants/api.config";
 const fetch = require("node-fetch");
 
-export async function getProductDetail(productId: string = ''): Promise<any> {
+export async function getProductDetail(productId: string): Promise<any> {
   const path = `${API_CONFIG.PRODUCT}/${productId}`;
   const res = await fetch(path, {
     method: 'GET',
@@ -14,7 +14,7 @@ export async function getProductDetail(productId: string = ''): Promise<any> {
   }
 }
 
-export async function getProductDescription(productId: string = ''): Promise<any> {
+export async function getProductDescription(productId: string): Promise<any> {
   const path = `${API_CONFIG.PRODUCT}/${productId}/description`;
   const res = await fetch(path, {
     method: 'GET',
