@@ -17,5 +17,5 @@ https://test-ml-bff-2-s5883.ondigitalocean.app
 
 ## post && Get requests
 
-- -> http://localhost:4000/api/search?q=IPod
-- -> http://localhost:4000/api/item/:idProduct
+- -> https://test-ml-bff-2-s5883.ondigitalocean.app/api/search?q=IPod
+- -> https://test-ml-bff-2-s5883.ondigitalocean.app/api/item/MLM900309196
